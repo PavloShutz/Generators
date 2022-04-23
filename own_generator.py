@@ -7,6 +7,10 @@ def generator(start=0, end=0, step=1):
             while start > end:
                 yield start
                 start += step
+        else:
+            while end < start:
+                yield end
+                end += step
     elif start == 0 and end != 0:
         if end > 0:
             if step > 0:
