@@ -18,6 +18,8 @@ def generator(start=0, end=0, step=1):
             yield end
             end += step
     elif start != 0 and end != 0:
-        while start < end:
-            yield start
-            start += step
+        if start < end:
+            if step > 0:
+                while start < end:
+                    yield start
+                    start += step
