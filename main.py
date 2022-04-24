@@ -8,15 +8,12 @@ def generate_random_of_ten_thousand():
 
 
 nums = generate_random_of_ten_thousand()
-f = open('1st', 'r+')
-f.truncate(0)
-f.close()
-c = open('2nd', 'r+')
-c.truncate(0)
-c.close()
-t = open('3rd', 'r+')
-t.truncate(0)
-t.close()
+files = ['1st', '2nd', '3rd']
+for i in files:
+    f = open(i, 'r+')
+    f.truncate(0)
+    f.close()
+
 first = open('1st', 'a')
 second = open('2nd', 'a')
 third = open('3rd', 'a')
