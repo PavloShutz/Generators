@@ -14,11 +14,39 @@ third = open('3nd', 'a')
 
 for i in nums:
     if i % 3 == 0:
-        first.write(f"{i}\n")
+        if i % 5 == 0:
+            if i % 2 == 0:
+                first.write(str(i) + '\n')
+                second.write(str(i) + '\n')
+                third.write(str(i) + '\n')
+            else:
+                first.write(str(i) + '\n')
+                second.write(str(i) + '\n')
+        else:
+            first.write(str(i) + '\n')
     elif i % 5 == 0:
-        second.write(f"{i}\n")
+        if i % 3 == 0:
+            if i % 2 == 0:
+                first.write(str(i) + '\n')
+                second.write(str(i) + '\n')
+                third.write(str(i) + '\n')
+            else:
+                first.write(str(i) + '\n')
+                second.write(str(i) + '\n')
+        else:
+            second.write(str(i) + '\n')
     elif i % 2 == 0:
-        third.write(f"{i}\n")
+        if i % 3 == 0:
+            if i % 5 == 0:
+                first.write(str(i) + '\n')
+                second.write(str(i) + '\n')
+                third.write(str(i) + '\n')
+            else:
+                first.write(str(i) + '\n')
+                third.write(str(i) + '\n')
+        else:
+            third.write(str(i) + '\n')
+
 
 first.close()
 second.close()
